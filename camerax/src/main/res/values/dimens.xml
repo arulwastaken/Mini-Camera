@@ -1,0 +1,19 @@
+<resources>
+    <dimen name="activity_horizontal_margin">14dp</dimen>
+    <dimen name="highlight_point_diameter">30dip</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_menu_margin">12dp</dimen>
+    <dimen name="cardCornerRadius">3.3dp</dimen>
+    <dimen name="cardElevation">4dp</dimen>
+    <dimen name="cardview_horizontal_padding">12dp</dimen>
+    <dimen name="cardview_vertical_padding">7dp</dimen>
+    <dimen name="drawer_menu_padding">12dp</dimen>
+    <dimen name="menu_padding_start">20dp</dimen>
+    <dimen name="menu_padding_end">10dp</dimen>
+
+    <dimen name="alert_dialog_fragment_margin">12dp</dimen>
+
+    <dimen name="capture_button_size">64dp</dimen>
+    <dimen name="capture_button_margin">36dp</dimen>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#800000</color>
+    <color name="colorPrimaryDark">#520000</color>
+    <color name="colorAccent">#d97300</color>
+    <color name="colorNotificationHeader">#a43929</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="charcoal_grey">#3f4448</color>
+    <color name="red_pink">#ea4551</color>
+    <color name="boring_green">#5abd61</color>
+    <color name="yellowish_orange">#ffb214</color>
+    <color name="bright_sky_blue">#00c1f8</color>
+    <color name="orange">#f97523</color>
+    <color name="dark_grey_87">#de292a2f</color>
+    <color name="cool_grey">#939aa4</color>
+    <color name="cool_grey_87">#de939aa4</color>
+    <color name="black_two">#0e0e0e</color>
+    <color name="dark_grey">#292a2f</color>
+    <color name="pale_grey_two">#ecedf1</color>
+    <color name="aqua_marine">#2be7c7</color>
+    <color name="darkish_pink">#e94551</color>
+    <color name="azure">#20b7f3</color>
+    <color name="cool_grey_two">#adaeaf</color>
+    <!--<color name="pressed">#f78741</color>-->
+    <color name="light_periwinkle">#dae7fc</color>
+    <color name="dark_sky_blue">#4488ee</color>
+
+
+    <color name="cui_list_selector_normal">#00000000</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="colorMessageTitle">#d7d7d7</color>
+    <color name="main_background">#f5f6f8</color>
+    <color name="denim">#355e72</color>
+    <color name="mahogany">#520000</color>
+    <color name="subtitle">#80ffffff</color>
+    <color name="shadow_transparent">#83000000</color>
+    <color name="indusSecondary">#ad3a00</color>
+    <color name="indusSecondaryDisabled">#e6cccc</color>
+    <color name="transparent60">#80520000</color>
+    <color name="notification_message">#292a2f</color>
+</resources>
