@@ -3,7 +3,16 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+
+    id "com.jfrog.bintray"
+    id 'maven-publish'
 }
+
+
+def packagePublishName = 'com.arul.minicamera'
+def libraryPublicVersion = '1.0.2'
+def libraryPublicDesc = 'Mini Camera implement it without any hassle'
+
 
 android {
     compileSdkVersion 30
@@ -65,4 +74,59 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+
+publishing {
+    publications {
+        BintrayPublication(MavenPublication) {
+            groupId packagePublishName
+            version = libraryPublicVersion
+            artifactId project.getName()
+
+            // Tell maven to prepare the generated "*.aar" file for publishing
+            artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
+
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                // Iterate over the api dependencies (we don't want the test ones), adding a <dependency> node for each
+                configurations.api.allDependencies.each {
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.group)
+                    dependencyNode.appendNode('artifactId', it.name)
+                    dependencyNode.appendNode('version', it.version)
+                }
+            }
+        }
+    }
+}
+
+bintray {
+
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
+
+
+    publications = ['BintrayPublication']
+
+    pkg {
+        repo = 'Mini-Camera'
+        name = 'Mini-Camera'
+        userOrg = user //An optional organization name when the repo belongs to one of the user's orgs
+        desc = 'what a fantastic package indeed!'
+        vcsUrl = 'https://github.com/arulmani33/Mini-CameraX-'
+        licenses = ['Apache-2.0']
+        publicDownloadNumbers = true
+
+        githubRepo = 'arulmani33/Mini-CameraX-'
+        githubReleaseNotesFile = 'README.md'
+
+
+        version {
+            name = libraryPublicVersion
+            desc = libraryPublicDesc
+            released  = new Date()
+            vcsTag = libraryPublicVersion
+        }
+    }
 }
