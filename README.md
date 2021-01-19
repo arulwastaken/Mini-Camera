@@ -1,3 +1,5 @@
+[ ![Download](https://api.bintray.com/packages/arulmani/Mini-Camera/Mini-Camera/images/download.svg?version=1.0.2) ](https://bintray.com/arulmani/Mini-Camera/Mini-Camera/1.0.2/link)
+
 # Mini-CameraX-
 
 Camera lib sdk using CameraX android. 
